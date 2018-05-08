@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Taufan Introduction to WebRTC</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <video autoplay controls></video>
@@ -29,6 +30,7 @@
             function onSuccess(stream) {
                 console.log('Success! We have a stream!');
                 videoArea.src = window.URL.createObjectURL(stream);
+                videoArea.className = 'grayscale_filter';
                 videoArea.play();
             }
 
